@@ -9,7 +9,7 @@ import React from 'react'
     
 
     // we only want object that is in array so we choose first item of array
-    const pt = posts[0];
+    // const pt = posts[0];
   
     return (
       // <div>
@@ -19,6 +19,7 @@ import React from 'react'
       //   <p className="text-center bg-zinc-300  mx-10 p-10">{pt.body}</p>
       
       // </div>
+      <div>post detail</div>
       
     );
   }
