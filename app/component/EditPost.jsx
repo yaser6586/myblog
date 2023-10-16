@@ -14,7 +14,7 @@ function EditPost({ posts, params }) {
   }
   async function handleUpdate() {
     if (body.length !== 0 && title.length !== 0) {
-      editPost(params.id);
+      editPost(title, body, params.id);
       setSubmitted(true);
     }
   }
