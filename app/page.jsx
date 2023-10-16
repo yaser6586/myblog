@@ -9,7 +9,7 @@ export default async function Home() {
    <>
    <div>
     {
-      posts.map(pt => <Post posts={pt}/>
+      posts.map(pt => <div key={pt.id}> <Post  posts={pt}/> </div>
         )
     }
     
