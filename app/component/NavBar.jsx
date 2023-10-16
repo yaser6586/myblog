@@ -49,7 +49,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">google</a>
+        <a  href="https://google.com" className="btn">google</a>
       </div>
     </div>
   );

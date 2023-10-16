@@ -1,5 +1,6 @@
 // 'use client'
 import { getPost } from '@/lib/fetchData'
+import Post from './component/Post'
 
 
 export default async function Home() {
@@ -8,10 +9,7 @@ export default async function Home() {
    <>
    <div>
     {
-      posts.map(pt => <>
-       <h1>{pt.title}</h1>
-       <p>{pt.body}</p>
-      </>
+      posts.map(pt => <Post posts={pt}/>
         )
     }
     
