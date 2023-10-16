@@ -1,10 +1,10 @@
 // 'use client'
-import { getPost } from '@/lib/fetchData'
+import {getAllPosts } from '@/lib/fetchData'
 import Post from './component/Post'
 
 
 export default async function Home() {
-  const posts = await getPost()
+  const posts = await getAllPosts()
   return (
    <>
    <div>
