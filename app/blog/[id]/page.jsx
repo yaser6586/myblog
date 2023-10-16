@@ -19,7 +19,7 @@ import React from 'react'
       //   <p className="text-center bg-zinc-300  mx-10 p-10">{pt.body}</p>
       
       // </div>
-      <div>post detail</div>
+      <div>post details</div>
       
     );
   }
