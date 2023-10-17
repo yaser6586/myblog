@@ -1,12 +1,20 @@
 import { NextResponse } from "next/server";
 import clientPromise from "@/lib/mongodb";
 
-
 export async function GET(request) {
-  // return NextResponse.json(data);
+  const { searchParams } = new URL(request.url);
+  const page = Number(searchParams.get("p"));
+  const limit = Number(searchParams.get("l"));
+  const skip = page * limit;
+
   const client = await clientPromise;
   const db = client.db("blog");
-  const allPosts = await db.collection("posts").find({}).toArray();
+  const allPosts = await db
+    .collection("posts")
+    .find({})
+    .limit(limit)
+    .skip(skip)
+    .toArray();
   return NextResponse.json(allPosts);
 }
 export async function POST(request) {

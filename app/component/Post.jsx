@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Post({ posts }) {
+  
   return (
     <div className="flex justify-center">
       <div className="w-1/2">
