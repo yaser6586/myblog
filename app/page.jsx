@@ -12,7 +12,7 @@ export default async function Home({ searchParams }) {
   const max = Math.ceil(posts.length) / limit + 1;
   return (
     <>
-      <div className="min-h-screen mt-5 flex flex-col flex-col-reverse sm:flex-row  ">
+      <div className="min-h-screen mt-5 flex  flex-col-reverse sm:flex-row  ">
         <SideBar />
         <div className=" basis-3/4 ">
           <div className="text-center"></div>
