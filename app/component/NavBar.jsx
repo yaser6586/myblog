@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 border-b-2 border-slate-100 fixed z-50 ">
+      <div className=""></div>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,7 +38,9 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">yaser blog</a>
+        <Link className="btn btn-ghost normal-case text-xl" href="./">
+          yaser blog
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -48,8 +53,8 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a  href="https://google.com" className="btn">google</a>
+      <div className="navbar-end mr-8">
+        <ThemeToggle />
       </div>
     </div>
   );

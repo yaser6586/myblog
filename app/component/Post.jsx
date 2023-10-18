@@ -3,10 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Post({ posts }) {
-  
   return (
     <div className="flex justify-center">
-      <div className="w-1/2">
+      <div className="w-3/4">
         <div className="card lg:card-side bg-base-100 shadow-xl m-3 ">
           <figure>
             <Image height={200} width={200} src="/post.jpg" alt="Album" />
