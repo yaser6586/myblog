@@ -15,11 +15,11 @@ async function PostDetail({ params }) {
         {pt.title}
       </h2>
       <p className="text-center bg-zinc-300  mx-10 p-10">{pt.body}</p>
-      <div className="text-center my-10">
+      <div className="text-center my-10 ">
         <DeletePost postId={pt._id} />
 
         <Link href={`/blog/edit/${params.id}`}>
-          <button className="btn btn-primary">edit</button>
+          <button className="btn btn-primary w-20">edit</button>
         </Link>
       </div>
     </div>

@@ -19,9 +19,9 @@ function EditPost({ posts, params }) {
     }
   }
   return (
-    <div className="flex justify-center align-middle ">
+    <div className="flex justify-center align-middle w-screen h-screen">
       <div className="flex-col">
-        <div className="text-center my-10">
+        <div className=" my-9 ">
           <input
             type="text"
             placeholder="Title"
@@ -30,10 +30,10 @@ function EditPost({ posts, params }) {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <div className="text-center my-10">
+        <div className="text-center my-10  ">
           <textarea
             placeholder="Bio"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs"
+            className="textarea textarea-bordered textarea-lg w-full  min-w-xs"
             value={body}
             onChange={(e) => setBody(e.target.value)}
           ></textarea>

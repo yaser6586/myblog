@@ -11,7 +11,9 @@ export async function GET(request) {
   const db = client.db("blog");
   const allPosts = await db
     .collection("posts")
-    .find({})
+    .find()
+    .sort({ $natural: -1 })
+    //with this code you code reverse the order of result and show the last post first
     .limit(limit)
     .skip(skip)
     .toArray();

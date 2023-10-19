@@ -16,7 +16,7 @@ export default function DeletePost({ postId }) {
     setDeleted(true);
   }
   return (
-    <button className="btn btn-error " onClick={handleDelete}>
+    <button className="btn btn-error mx-2 " onClick={handleDelete}>
       delete
     </button>
   );
