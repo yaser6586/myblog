@@ -11,7 +11,7 @@ function SideBar() {
         width={200}
         alt="my pic"
       />
-      <p className=" mx-10 mt-8 text-justify">
+      <p className=" mx-10 mt-3 text-justify">
         My name is <b>Yaser Hoseini</b> I&lsquo;m computer engineer and my main
         skill is front end development, this weblog is my Portfolio . this
         weblog is fullstack app and developed by me with Next js and is

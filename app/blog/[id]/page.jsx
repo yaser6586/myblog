@@ -2,6 +2,23 @@ import DeletePost from "@/app/component/DeletePost";
 import { getPost } from "@/lib/fetchData";
 import Link from "next/link";
 import React from "react";
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const id = params.id;
+
+  // fetch data
+  const product = await getPost(id);
+  const pt = product[0];
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: pt.title,
+    openGraph: {
+      images: ["/some-specific-page-image.jpg", ...previousImages],
+    },
+  };
+}
 
 async function PostDetail({ params }) {
   const posts = await getPost(params.id);
