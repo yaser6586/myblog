@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { useState } from "react";
 
 import { addPost } from "@/lib/fetchData";
+// import { revalidatePath } from "next/cache";
 
 function BlogPage() {
   const [title, setTitle] = useState("");
@@ -12,6 +13,7 @@ function BlogPage() {
     if (body.length !== 0 && title.length !== 0) {
       await addPost(title, body);
       setSubmitted(true);
+      
     }
   }
   if (submitted) {
